@@ -1,23 +1,78 @@
 aid: arrikto
+
 name: Arrikto
-description: 'Arrikto is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.arrikto.com/wp-content/uploads/2022/04/arrikto-black-bgnd-fb.png
+
+description: Arrikto provides MLOps solutions that enable scalable machine learning model deployment on Kubernetes. Their platform offers storage,
+  data management, and AI workload orchestration for industries such as retail, finance, oil & gas, healthcare, and telecommunications. Arrikto
+  also offers on‑demand courses and an academy for Kubeflow and MLOps training, helping organizations accelerate AI initiatives.
+
 url: https://raw.githubusercontent.com/api-evangelist/arrikto/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- MLOps
+- Kubernetes
+- AI
+- DataManagement
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arrikto-hosts.yml
+- type: Vendors
+  url: vendors/arrikto-vendors.yml
+- type: DomainSecurity
+  url: security/arrikto-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.arrikto.com/
+- type: Documentation
+  url: https://academy.arrikto.com/
+- type: Blog
+  url: https://www.arrikto.com/blog/
+- type: Support
+  url: https://www.arrikto.com/contact/
+- type: TermsOfService
+  url: https://www.arrikto.com/legal/terms-of-service/
+- type: PrivacyPolicy
+  url: https://www.arrikto.com/legal/privacy-policy/
+
+apis:
+- name: Arrikto API
+  description: 'Arrikto provides MLOps platform APIs documented at the Arrikto Academy. '
+  humanURL: https://academy.arrikto.com/
+  aid: arrikto:arrikto-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Academy documentation is a JavaScript‑rendered site with no discoverable OpenAPI spec.
+  evidence:
+  - url: https://academy.arrikto.com/openapi.json
+    status: 404
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
